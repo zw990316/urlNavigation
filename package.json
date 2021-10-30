@@ -1,8 +1,10 @@
 {
 	"name": "url-navigation",
-	"displayName": "url-navigation",
+	"displayName": "常用网站RSS",
 	"description": "Surf in the vscode",
 	"publisher": "VitoZhang",
+	"icon": "assets/imgs/RSS.png",
+	"keywords":["RSS","摸鱼","导航","网址","fish","上班"],
 	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.61.0"
