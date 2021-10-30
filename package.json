@@ -2,6 +2,7 @@
 	"name": "url-navigation",
 	"displayName": "url-navigation",
 	"description": "Surf in the vscode",
+	"publisher": "VitoZhang",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.61.0"
@@ -20,7 +21,7 @@
 				{
 					"id": "navigation",
 					"title": "Navigation",
-					"icon": "src/assets/imgs/navigation.svg"
+					"icon": "$(globe)"
 				}
 			]
 		},
