@@ -1,4 +1,6 @@
-import { ExtensionContext, ViewColumn, WebviewPanel, window, commands } from 'vscode';
+import { join } from 'path';
+import path = require('path');
+import { ExtensionContext, ViewColumn, WebviewPanel, window, commands, Uri } from 'vscode';
 import website from "../website"
 let webviewPanel : WebviewPanel | undefined;
 
@@ -17,11 +19,11 @@ export function createWebView(
                 enableScripts: true
             }
         );
-        webviewPanel.title = label;
+        // webviewPanel.iconPath = Uri.file(join(__filename,'..','..','src','assets','imgs','js.png'));
+        webviewPanel.title = "README.md";
         webviewPanel.webview.postMessage({label :label, website: website});
         webviewPanel.webview.html = getIframeHtml(label);
     } else {
-        webviewPanel.title = label;
         webviewPanel.webview.postMessage({label :label, website: website});
         webviewPanel.reveal();
     }

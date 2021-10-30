@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
 	console.log('插件启动啦！！！');
 	TreeViewProvider.initTreeViewItem();
 	const treeItems = vscode.commands.registerCommand('itemClick', (label)=>{
-		vscode.window.showInformationMessage(label);
+		// vscode.window.showInformationMessage(label);
 		const webView = createWebView(context, vscode.ViewColumn.Active, label);
 		context.subscriptions.push(webView);
 	});
