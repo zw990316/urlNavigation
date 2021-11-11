@@ -1,8 +1,15 @@
 import { join } from 'path';
 import path = require('path');
 import { ExtensionContext, ViewColumn, WebviewPanel, window, commands, Uri } from 'vscode';
-import website from "../website"
+import website from "../website";
+import { proxyUrl } from '../server/proxy';
 let webviewPanel : WebviewPanel | undefined;
+
+function handleUrl(datArr:any){
+    datArr.map( (item: any) => {
+        item.site = proxyUrl(item.site)
+    });
+}
 
 export function createWebView(
     context: ExtensionContext,
@@ -21,6 +28,7 @@ export function createWebView(
         );
         // webviewPanel.iconPath = Uri.file(join(__filename,'..','..','src','assets','imgs','js.png'));
         webviewPanel.title = "README.md";
+        handleUrl(website);
         webviewPanel.webview.postMessage({label :label, website: website});
         webviewPanel.webview.html = getIframeHtml(label);
     } else {
@@ -64,11 +72,15 @@ export function getIframeHtml(label: string ) {
                     }
                 })
             })
+        //     window.onhashchange = function(){
+        //         alert("发生变化");  
+        // }
+        console.log('111111111111111111111111111111111',window.iframe)
         </script>
         </head>
 
         <body>
-        <iframe id='iframe1' class="iframeDiv" src="https://weread.qq.com/" scrolling="auto"></iframe>
+        <iframe id='iframe1' class="iframeDiv" frameborder="0"  src="https://weread.qq.com/" scrolling="auto"></iframe>
         </body>
     </html>
     `;
