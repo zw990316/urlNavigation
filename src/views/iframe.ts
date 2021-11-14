@@ -1,4 +1,4 @@
-export function getIframeHtml(resourceRoot: string, label: string ) {
+export function getIframeHtml(resourceRoot: string, label: string, proxyUrl='' ) {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -6,9 +6,6 @@ export function getIframeHtml(resourceRoot: string, label: string ) {
         <base href="${resourceRoot}">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script>
-        console.log("222222222222222222222222222222222222222222222222222222222222222")
-        </script>
         <style>
             html,
             body {
@@ -22,6 +19,9 @@ export function getIframeHtml(resourceRoot: string, label: string ) {
                 height: 100%;
             }
         </style>
+        <script>
+        window.proxyUrl = '${proxyUrl}';
+        </script>
         </head>
 
         <body>

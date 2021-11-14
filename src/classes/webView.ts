@@ -12,7 +12,7 @@ function getIframePage(webview : Webview,label: string) {
         .asWebviewUri(Uri.file(join(__filename,'..','..','src','views')))
         .toString() + '/';
 
-    return getIframeHtml(resourceRoot, label);
+    return getIframeHtml(resourceRoot, label, proxyUrl());
   }
 export function createWebView(
     context: ExtensionContext,
@@ -32,10 +32,10 @@ export function createWebView(
         // webviewPanel.iconPath = Uri.file(join(__filename,'..','..','src','assets','imgs','js.png'));
         webviewPanel.title = "README.md";
         // handleUrl(website);
-        webviewPanel.webview.postMessage({label :label, website: website, proxyUrl: proxyUrl()});
+        webviewPanel.webview.postMessage({label :label, website: website });
         webviewPanel.webview.html = getIframePage(webviewPanel.webview, label);
     } else {
-        webviewPanel.webview.postMessage({label :label, website: website, proxyUrl: proxyUrl});
+        webviewPanel.webview.postMessage({label :label, website: website });
         webviewPanel.reveal();
     }
 
