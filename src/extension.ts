@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(webView);
 	});
 	context.subscriptions.push(treeItems);
-	start();
+	// start();
 
 }
 

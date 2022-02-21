@@ -2,8 +2,9 @@ window.addEventListener('message', (e) => {
     console.log(e);
     e.data.website.map(item =>{
         if(item.label === e.data.label){
-            document.getElementById('iframe1').src = proxy(item.site);
-            console.log(proxy(item.site));
+            document.getElementById('iframe1').src = item.site;
+            // document.getElementById('iframe1').src = proxy(item.site);
+            // console.log(proxy(item.site));
         }
     });
 });
@@ -12,6 +13,7 @@ function proxy(url) {
     if (window.proxyUrl) {
       return `${proxyUrl}${encodeURIComponent(url)}`;
     }
+    console.log(url);
     return url;
   }
 //     window.onhashchange = function(){

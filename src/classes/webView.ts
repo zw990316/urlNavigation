@@ -12,7 +12,8 @@ function getIframePage(webview : Webview,label: string) {
         .asWebviewUri(Uri.file(join(__filename,'..','..','src','views')))
         .toString() + '/';
 
-    return getIframeHtml(resourceRoot, label, proxyUrl());
+    return getIframeHtml(resourceRoot);
+    // return getIframeHtml(resourceRoot, label, proxyUrl());
   }
 export function createWebView(
     context: ExtensionContext,
