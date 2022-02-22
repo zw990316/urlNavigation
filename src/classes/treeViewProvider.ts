@@ -41,18 +41,27 @@ export class TreeViewProvider implements TreeDataProvider <TreeItemNode> {
     getTreeItem(element: TreeItemNode): TreeItem | Thenable<TreeItem> {
         return element;
     }
-    getChildren(element?: TreeItemNode | undefined): import('vscode').ProviderResult<TreeItemNode[]> {
-        return website.map(
-            item => new TreeItemNode(
+    getChildren(element?: TreeItemNode | undefined, type?: string): import('vscode').ProviderResult<TreeItemNode[]> {
+        // return website.map(
+        //     item => new TreeItemNode(
+        //         item.label as string,
+        //         TreeItemCollapsibleState.None as TreeItemCollapsibleState,
+        //     )
+        // );
+        let childs:any = [];
+        website.map(item =>{
+            if(type === item.type){
+            childs.push(new TreeItemNode(
                 item.label as string,
                 TreeItemCollapsibleState.None as TreeItemCollapsibleState,
-            )
-        );
+            ));}
+        });
+        return childs;
     }
 
     public static initTreeViewItem(){
-        const treeViewProvider = new TreeViewProvider();
-        window.registerTreeDataProvider('treeView-data', treeViewProvider);
+        const treeViewProvider = new TreeViewProvider('read');
+        window.registerTreeDataProvider('read', treeViewProvider);
     }
 
 }

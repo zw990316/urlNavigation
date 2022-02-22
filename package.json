@@ -37,28 +37,24 @@
 		"views": {
 			"navigation": [
 				{
-					"id": "treeView-data",
+					"id": "read",
 					"name": "阅读"
 				},
 				{
-					"id": "treeView-data2",
-					"name": "刷题"
-				},
-				{
-					"id": "treeView-data3",
+					"id": "interview",
 					"name": "面试"
 				},
 				{
-					"id": "treeView-data4",
+					"id": "blog",
 					"name": "博客"
 				},
 				{
-					"id": "treeView-data5",
-					"name": "刷题"
+					"id": "pictures",
+					"name": "摄影"
 				},
 				{
-					"id": "treeView-data6",
-					"name": "摄影"
+					"id": "other",
+					"name": "其他"
 				}
 			]
 		}
