@@ -37,11 +37,14 @@ export class TreeItemNode extends TreeItem {
 }
 
 export class TreeViewProvider implements TreeDataProvider <TreeItemNode> {
+    constructor(public type: string){
+
+    }
     onDidChangeTreeData?: import('vscode').Event<void | TreeItemNode | null | undefined> | undefined;
     getTreeItem(element: TreeItemNode): TreeItem | Thenable<TreeItem> {
         return element;
     }
-    getChildren(element?: TreeItemNode | undefined, type?: string): import('vscode').ProviderResult<TreeItemNode[]> {
+    getChildren(element?: TreeItemNode | undefined): import('vscode').ProviderResult<TreeItemNode[]> {
         // return website.map(
         //     item => new TreeItemNode(
         //         item.label as string,
@@ -50,7 +53,7 @@ export class TreeViewProvider implements TreeDataProvider <TreeItemNode> {
         // );
         let childs:any = [];
         website.map(item =>{
-            if(type === item.type){
+            if(item.type === this.type){
             childs.push(new TreeItemNode(
                 item.label as string,
                 TreeItemCollapsibleState.None as TreeItemCollapsibleState,
@@ -60,8 +63,12 @@ export class TreeViewProvider implements TreeDataProvider <TreeItemNode> {
     }
 
     public static initTreeViewItem(){
-        const treeViewProvider = new TreeViewProvider('read');
-        window.registerTreeDataProvider('read', treeViewProvider);
+        window.registerTreeDataProvider('read', new TreeViewProvider('read'));
+        window.registerTreeDataProvider('interview', new TreeViewProvider('interview'));
+        window.registerTreeDataProvider('blog', new TreeViewProvider('blog'));
+        window.registerTreeDataProvider('pictures', new TreeViewProvider('pictures'));
+        window.registerTreeDataProvider('other', new TreeViewProvider('other'));
+        // window.registerTreeDataProvider('other', treeViewProvider);
     }
 
 }
