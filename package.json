@@ -1,8 +1,9 @@
 {
 	"name": "url-navigation",
 	"displayName": "常用网站RSS",
-	"description": "Surf in the vscode",
+	"description": "摸鱼、刷题、读小说在这里都能满足你",
 	"publisher": "VitoZhang",
+	"icon": "assets/imgs/RSS.png",
 	"keywords": [
 		"RSS",
 		"摸鱼",
