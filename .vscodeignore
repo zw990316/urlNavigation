@@ -11,6 +11,6 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
-**/*.png
-**/*.ico
-**/*.svg
+!**/*.png
+!**/*.ico
+!**/*.svg

@@ -3,7 +3,11 @@
 	"displayName": "常用网站RSS",
 	"description": "摸鱼、刷题、读小说在这里都能满足你",
 	"publisher": "VitoZhang",
-	"icon": "assets/imgs/RSS.png",
+	"icon": "src/assets/imgs/RSS.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zw990316/urlNavigation.git"
+	  },
 	"keywords": [
 		"RSS",
 		"摸鱼",
