@@ -19,12 +19,11 @@ export function getIframeHtml(resourceRoot: string ) {
                 height: 100%;
             }
         </style>
-        
+        <script  type="text/javascript" src="iframe.js"></script>
         </head>
 
         <body>
         <iframe id='iframe1' class="iframeDiv" frameborder="0" scrolling="auto"></iframe>
-        <script  type="text/javascript" src="iframe.js"></script>
         </body>
     </html>
     `;

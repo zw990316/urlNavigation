@@ -9,20 +9,20 @@ window.addEventListener('message', (e) => {
     });
 });
 
-function proxy(url) {
-    if (window.proxyUrl) {
-      return `${proxyUrl}${encodeURIComponent(url)}`;
-    }
-    console.log(url);
-    return url;
-  }
+// function proxy(url) {
+//     if (window.proxyUrl) {
+//       return `${proxyUrl}${encodeURIComponent(url)}`;
+//     }
+//     console.log(url);
+//     return url;
+//   }
 //     window.onhashchange = function(){
 //         console.log("发生变化");  
 // };
-setTimeout(function(){
-    var iframe = document.getElementById('iframe1');
-    var frameContent = iframe.contentWindow;
-    console.log("33333333333333333", frameContent);
-}, 100000);
+// setTimeout(function(){
+//     var iframe = document.getElementById('iframe1');
+//     var frameContent = iframe.contentWindow;
+//     console.log("33333333333333333", frameContent);
+// }, 100000);
 
 // console.log('1111111111111', window.location.href);
