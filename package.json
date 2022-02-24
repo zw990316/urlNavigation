@@ -3,7 +3,6 @@
 	"displayName": "常用网站RSS",
 	"description": "Surf in the vscode",
 	"publisher": "VitoZhang",
-	"icon": "assets/imgs/RSS.png",
 	"keywords": [
 		"RSS",
 		"摸鱼",
@@ -101,6 +100,6 @@
 	"dependencies": {
 		"content-type": "^1.0.4",
 		"follow-redirects": "^1.14.5",
-		"vsce": "^2.2.0"
+		"vsce": "^1.103.1"
 	}
 }
