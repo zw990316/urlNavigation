@@ -5,7 +5,7 @@ export default [
     {type:'interview',name:'runoob',label:'菜鸟教程',site:'https://www.runoob.com/',icon:"runoob.ico"},
     {type:'interview',name:'pzijun',label:'前端瓶子君算法',site:'https://www.pzijun.cn/',icon:"pzijun.ico"},
     {type:'interview',name:'muyiy',label:'木易杨前端进阶',site:'https://muyiy.cn/',icon:"muyiy.ico"},
-    {type:'interview',name:'fe-interview',label:'前端面试指南',site:'https://blog.poetries.top/FE-Interview-Questions/',icon:"fe-interview.png"},   
+    {type:'interview',name:'fe-interview',label:'前端面试指南',site:'http://interview.poetries.top/',icon:"fe-interview.png"},   
     {type:'other',name:'all_history',label:'全历史',site:'https://www.allhistory.com/',icon:"all_history.svg"},
     {type:'blog',name:'liao_blog',label:'廖雪峰博客',site:'https://www.liaoxuefeng.com/',icon:"liao_blog.ico"},
     {type:'blog',name:'ruan_blog',label:'阮一峰博客',site:'https://www.ruanyifeng.com/',icon:"ruan_blog.ico"},
